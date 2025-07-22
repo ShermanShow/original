@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Fut-TCG ⚽</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <!-- Carga Twemoji desde jsDelivr -->
+<script src="https://cdn.jsdelivr.net/npm/twemoji@14.0.2/dist/twemoji.min.js"></script>
+
+
+</head>
+<body>
+  <h1>Fut-TCG ⚽</h1>
+
+  <div id="gameBoard">
+    <!-- Equipo Local -->
+    <div class="team" id="team1">
+      <h2>Local</h2>
+      <div class="team-overval" id="team1Overval">ATA: – | POS: – | DEF: –</div>
+      <div id="team1Arquero"></div>
+      <div id="team1Jugadores"></div>
+    </div>
+
+    <!-- Panel central de relato -->
+    <div id="narrativePanel">
+      <div id="log-header">
+        <span id="time">0'</span>
+        <span id="score">0-0</span>
+      </div>
+      <div id="log-container"></div>
+    </div>
+
+<div class="controls">
+  <div id="turn-timer" class="turn-timer">20″</div>
+  <button id="drawActionCard">Sacar Carta</button>
+  <button id="endTurn">Terminar Turno</button>
+</div>
+
+
+
+
+
+    <!-- Equipo Visitante -->
+    <div class="team" id="team2">
+      <h2>Visitante</h2>
+      <div class="team-overval" id="team2Overval">ATA: – | POS: – | DEF: –</div>
+      <div id="team2Arquero"></div>
+      <div id="team2Jugadores"></div>
+    </div>
+  </div>
+
+ 
+  <!-- Modal de Carta de Acción -->
+  <div id="actionCardModal" class="modal">
+    <div class="modal-content">
+      <img
+        id="actionCardImage"
+        src="/img/fallback.jpg"
+        alt="Carta de acción"
+      />
+      <div id="actionCardInfo">
+        <h3 id="actionCardTitle"></h3>
+        <p><strong>Tiempo:</strong> <span id="actionCardTime"></span>'</p>
+        <p><strong>Condición:</strong> <span id="actionCardCondition"></span></p>
+        <p><strong>Si:</strong> <span id="actionCardResultYes"></span></p>
+        <p><strong>No:</strong> <span id="actionCardResultNo"></span></p>
+        <p><strong>Extra:</strong> <span id="actionCardExtra"></span></p>
+        <div class="modal-buttons">
+          <button id="useActionCard">Usar Carta</button>
+          <button id="cancelActionCard">Cancelar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="team1">
+  <div id="team1Overval"></div>
+  <div id="team1Arquero"></div>
+  <div id="team1Jugadores"></div>
+</div>
+<div id="team2">
+  <div id="team2Overval"></div>
+  <div id="team2Arquero"></div>
+  <div id="team2Jugadores"></div>
+</div>
+
+  <!-- Carga los scripts en la raíz -->
+  <script type="module" src="src/ui.js"></script>
+  <script type="module" src="src/main.js"></script>
+</body>
+</html>
